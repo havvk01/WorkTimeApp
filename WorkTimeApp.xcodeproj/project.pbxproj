@@ -12,6 +12,7 @@
 		0B7D927429EEA03400A1504A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7D927329EEA03400A1504A /* ViewController.swift */; };
 		0B7D927929EEA03600A1504A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B7D927829EEA03600A1504A /* Assets.xcassets */; };
 		0B7D927C29EEA03600A1504A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B7D927A29EEA03600A1504A /* LaunchScreen.storyboard */; };
+		0B7D928929F1798400A1504A /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7D928829F1798400A1504A /* R.generated.swift */; };
 		9CA84352A9B380B64FD1567D /* Pods_WorkTimeApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F39144500794B756D6FBCE /* Pods_WorkTimeApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		0B7D927829EEA03600A1504A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B7D927B29EEA03600A1504A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B7D927D29EEA03600A1504A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B7D928829F1798400A1504A /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		723438520060D203B74F79A7 /* Pods-WorkTimeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkTimeApp.release.xcconfig"; path = "Target Support Files/Pods-WorkTimeApp/Pods-WorkTimeApp.release.xcconfig"; sourceTree = "<group>"; };
 		9DAED0A3BDD44DBA00561811 /* Pods-WorkTimeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorkTimeApp.debug.xcconfig"; path = "Target Support Files/Pods-WorkTimeApp/Pods-WorkTimeApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +63,7 @@
 		0B7D926E29EEA03400A1504A /* WorkTimeApp */ = {
 			isa = PBXGroup;
 			children = (
+				0B7D928629F178B800A1504A /* Resources */,
 				0B7D928429EEA09B00A1504A /* Application */,
 				0B7D928329EEA07F00A1504A /* SupportingFiles */,
 				0B7D927329EEA03400A1504A /* ViewController.swift */,
@@ -87,6 +90,22 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		0B7D928629F178B800A1504A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0B7D928729F1793C00A1504A /* Generated */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0B7D928729F1793C00A1504A /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				0B7D928829F1798400A1504A /* R.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		C2870CF533469FB0D824624E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,7 +120,6 @@
 				9DAED0A3BDD44DBA00561811 /* Pods-WorkTimeApp.debug.xcconfig */,
 				723438520060D203B74F79A7 /* Pods-WorkTimeApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -117,6 +135,7 @@
 				0B7D926929EEA03400A1504A /* Frameworks */,
 				0B7D926A29EEA03400A1504A /* Resources */,
 				74CC7B8203E114DB7AEEA2DE /* [CP] Embed Pods Frameworks */,
+				0B7D928529F1786200A1504A /* R Generate */,
 			);
 			buildRules = (
 			);
@@ -173,6 +192,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0B7D928529F1786200A1504A /* R Generate */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "R Generate";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/WorkTimeApp/Resources/Generated/R.generated.swift\"\n";
+		};
 		39C41A0C130C4C1CCF7482C6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -222,6 +260,7 @@
 				0B7D927429EEA03400A1504A /* ViewController.swift in Sources */,
 				0B7D927029EEA03400A1504A /* AppDelegate.swift in Sources */,
 				0B7D927229EEA03400A1504A /* SceneDelegate.swift in Sources */,
+				0B7D928929F1798400A1504A /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
